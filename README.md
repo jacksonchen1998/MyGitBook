@@ -6,6 +6,6 @@ description: Write some notes for learning computer science
 
 * **基本素養**
 * **Python**
-* **Deep Learning**
+* **Machine Learning**
 * **DevOps**
 * **Front-end**
