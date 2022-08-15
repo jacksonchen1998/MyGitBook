@@ -14,8 +14,8 @@
 ## Machine Learning
 
 * [RoadMap](machine-learning/roadmap.md)
-* [Notes about the book](machine-learning/notes-about-the-book/README.md)
-  * [Introduction](machine-learning/notes-about-the-book/introduction.md)
+* [Deep Learning (Goodfellow)](machine-learning/deep-learning-goodfellow/README.md)
+  * [Introduction](machine-learning/deep-learning-goodfellow/introduction.md)
 
 ## DevOps
 
