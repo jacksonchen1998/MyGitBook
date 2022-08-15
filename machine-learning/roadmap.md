@@ -14,4 +14,6 @@ description: Some materials and graph for learning ML
 
 [Hands-on Machine Learning with Scikit-Learn and TensorFlow](http://www.clc.hcmus.edu.vn/wp-content/uploads/2017/11/Hands\_On\_Machine\_Learning\_with\_Scikit\_Learn\_and\_TensorFlow.pdf)
 
+[Deep Learning with Goodfellow YT](https://www.youtube.com/playlist?list=PLsXu9MHQGs8df5A4PzQGw-kfviylC-R9b)
+
 ![](<../.gitbook/assets/image (7).png>)

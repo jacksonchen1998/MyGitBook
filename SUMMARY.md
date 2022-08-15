@@ -16,6 +16,7 @@
 * [RoadMap](machine-learning/roadmap.md)
 * [Deep Learning (Goodfellow)](machine-learning/deep-learning-goodfellow/README.md)
   * [Introduction](machine-learning/deep-learning-goodfellow/introduction.md)
+  * [Linear Algebra](machine-learning/deep-learning-goodfellow/linear-algebra.md)
 
 ## DevOps
 
