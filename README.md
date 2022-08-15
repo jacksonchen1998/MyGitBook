@@ -1,5 +1,7 @@
 ---
 description: Write some notes for learning computer science
+cover: .gitbook/assets/cat.jpg
+coverY: 0
 ---
 
 # My CS Notes

@@ -9,6 +9,7 @@
 ## Python
 
 * [RoadMap](python/roadmap.md)
+* [Learn the basics](python/learn-the-basics.md)
 
 ## Deep Learning
 
