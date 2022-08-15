@@ -11,10 +11,11 @@
 * [RoadMap](python/roadmap.md)
 * [Learn the basics](python/learn-the-basics.md)
 
-## Deep Learning
+## Machine Learning
 
-* [RoadMap](deep-learning/roadmap.md)
-* [Notes about the book](deep-learning/notes-about-the-book.md)
+* [RoadMap](machine-learning/roadmap.md)
+* [Notes about the book](machine-learning/notes-about-the-book/README.md)
+  * [Introduction](machine-learning/notes-about-the-book/introduction.md)
 
 ## DevOps
 
