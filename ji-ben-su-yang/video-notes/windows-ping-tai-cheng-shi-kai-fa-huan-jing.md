@@ -14,10 +14,10 @@
 
 英文拼字糾正外掛
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (9).png>)
 
 ### Windows Terminal
 
 能夠開啟Powershell、WSL、Terminal 的高階終端機
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (11).png>)

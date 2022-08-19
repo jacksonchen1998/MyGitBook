@@ -16,4 +16,4 @@ description: Some materials and graph for learning ML
 
 [Deep Learning with Goodfellow YT](https://www.youtube.com/playlist?list=PLsXu9MHQGs8df5A4PzQGw-kfviylC-R9b)
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (7) (1).png>)
