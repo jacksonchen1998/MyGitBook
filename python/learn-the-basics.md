@@ -45,5 +45,5 @@ print(list)
 // Output will be ('1', 'Happy', '你好')
 ```
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (1).png>)
 

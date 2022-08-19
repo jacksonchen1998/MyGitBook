@@ -5,6 +5,8 @@
 ## 基本素養
 
 * [Overview](ji-ben-su-yang/overview.md)
+* [Video Notes](ji-ben-su-yang/video-notes/README.md)
+  * [Windows 平台程式開發環境](ji-ben-su-yang/video-notes/windows-ping-tai-cheng-shi-kai-fa-huan-jing.md)
 
 ## Python
 
