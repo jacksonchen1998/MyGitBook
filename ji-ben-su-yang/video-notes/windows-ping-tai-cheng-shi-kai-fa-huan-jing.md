@@ -8,7 +8,7 @@
 
 格式化網頁程式語言的外掛
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (12).png>)
 
 ### Code Spell Checker
 

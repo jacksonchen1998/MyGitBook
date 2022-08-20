@@ -9,6 +9,7 @@
   * [Windows 平台程式開發環境](ji-ben-su-yang/video-notes/windows-ping-tai-cheng-shi-kai-fa-huan-jing.md)
   * [macOS 平台程式開發](ji-ben-su-yang/video-notes/macos-ping-tai-cheng-shi-kai-fa.md)
   * [Linux 平台程式開發環境](ji-ben-su-yang/video-notes/linux-ping-tai-cheng-shi-kai-fa-huan-jing.md)
+  * [使用 GDB 除錯基本教學](ji-ben-su-yang/video-notes/shi-yong-gdb-chu-cuo-ji-ben-jiao-xue.md)
 
 ## Python
 
