@@ -1,6 +1,6 @@
 # 使用 GDB 除錯基本教學
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (14).png>)
 
 透過 `sudo apt install gdb` 安裝
 
