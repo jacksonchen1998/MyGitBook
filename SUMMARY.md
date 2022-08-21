@@ -13,6 +13,7 @@
   * [GIT 的基本使用教學](ji-ben-su-yang/video-notes/git-de-ji-ben-shi-yong-jiao-xue.md)
   * [GITHUB 建立/連結 GIT 專案教學](ji-ben-su-yang/video-notes/github-jian-li-lian-jie-git-zhuan-an-jiao-xue.md)
   * [Github 的 Pull Request 教學](ji-ben-su-yang/video-notes/github-de-pull-request-jiao-xue.md)
+  * [Git Commit Message](ji-ben-su-yang/video-notes/git-commit-message.md)
 
 ## Python
 
