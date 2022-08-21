@@ -47,3 +47,49 @@ print(list)
 
 ![](<../.gitbook/assets/image (4) (2).png>)
 
+#### Set
+
+A set is a collection which is _unordered_, _unchangeable\*_, and _unindexed_.
+
+```python
+thisset = {"apple", "banana", "cherry", "apple"}
+```
+
+#### Dictionary
+
+Duplicate values will overwrite existing values.
+
+```python
+thisdict = { 
+"brand": "Ford", 
+"model": "Mustang", 
+"year": 1964, 
+"year": 2020 
+}
+print(thisdict)
+// Output will be {'brand': 'Ford', 'model': 'Mustang', 'year': 2020}
+```
+
+[Dictionary method](https://www.w3schools.com/python/python\_ref\_dictionary.asp)
+
+#### Multiple statement in the same line
+
+```python
+a = 330
+b = 330
+print("A") if a > b else print("=") if a == b else print("B")
+```
+
+### Arbitrary Arguments, \*args
+
+If you do not know how many arguments that will be passed into your function, add a `*` before the parameter name in the function definition.
+
+```python
+def my_function(*kids): 
+    print("The youngest child is " + kids[2])
+    
+my_function("Emil", "Tobias", "Linus")
+
+// Output will be "The youngest child is Linus"
+```
+
