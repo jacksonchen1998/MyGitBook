@@ -34,7 +34,7 @@
 
 `git commit -m "The message that you want to describe about the commit"`
 
-![第一行為改動標題，下方為此改動的註解](<../../.gitbook/assets/image (8).png>)
+![第一行為改動標題，下方為此改動的註解](../../.gitbook/assets/image.png)
 
 #### 檢視 Git 提交紀錄
 

@@ -6,4 +6,4 @@
 
 #### 從標題跟內文搜尋指定內容
 
-`git log --all --grep="The context that you want tp search"`
+`git log --all --grep="The context that you want to search"`

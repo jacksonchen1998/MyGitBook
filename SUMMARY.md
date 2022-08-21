@@ -14,6 +14,7 @@
   * [GITHUB 建立/連結 GIT 專案教學](ji-ben-su-yang/video-notes/github-jian-li-lian-jie-git-zhuan-an-jiao-xue.md)
   * [Github 的 Pull Request 教學](ji-ben-su-yang/video-notes/github-de-pull-request-jiao-xue.md)
   * [Git Commit Message](ji-ben-su-yang/video-notes/git-commit-message.md)
+  * [用 Git & Github 與他人協作開發](ji-ben-su-yang/video-notes/yong-git-github-yu-ta-ren-xie-zuo-kai-fa.md)
 
 ## Python
 

@@ -14,7 +14,7 @@
 
 英文拼字糾正外掛
 
-![](<../../.gitbook/assets/image (9).png>)
+![](<../../.gitbook/assets/image (9) (2).png>)
 
 ### Windows Terminal
 
