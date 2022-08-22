@@ -20,6 +20,7 @@
 
 * [RoadMap](python/roadmap.md)
 * [Learn the basics](python/learn-the-basics.md)
+* [Advanced Topics](python/advanced-topics.md)
 
 ## Machine Learning
 
