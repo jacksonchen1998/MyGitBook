@@ -36,4 +36,8 @@ $$
 
 > Page 38
 
-Sometimes we may also wish to measure the size of a matrix. In the context of deep learning, the most common way to do this is with the otherwise obscure **Frobenius norm,** which is analogous to the  norm of a vector.
+Sometimes we may also wish to measure the size of a matrix. In the context of deep learning, the most common way to do this is with the otherwise obscure **Frobenius norm,** which is analogous to the L2 norm of a vector.
+
+$$
+||A||_{F}= \sqrt{\sum_{i,j}}A^{2}_{i,j}
+$$
