@@ -200,3 +200,191 @@ if __name__=='__main__':
 # This code is contributed by Manikantan Narasimhan
 ```
 
+#### Deletion / Reverse Linked List
+
+```python
+# A complete working Python3 program to
+# demonstrate deletion in singly
+# linked list with class
+ 
+# Node class
+ 
+class Node:
+ 
+    # Constructor to initialize the node object
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+ 
+ 
+class LinkedList:
+ 
+    # Function to initialize head
+    def __init__(self):
+        self.head = None
+ 
+    # Function to insert a new node at the beginning
+    def push(self, new_data):
+        new_node = Node(new_data)
+        new_node.next = self.head
+        self.head = new_node
+ 
+    # Given a reference to the head of a list and a key,
+    # delete the first occurrence of key in linked list
+    def deleteNode(self, key):
+ 
+        # Store head node
+        temp = self.head
+ 
+        # If head node itself holds the key to be deleted
+        if (temp is not None):
+            if (temp.data == key):
+                self.head = temp.next
+                temp = None
+                return
+ 
+        # Search for the key to be deleted, keep track of the
+        # previous node as we need to change 'prev.next'
+        while(temp is not None):
+            if temp.data == key:
+                break
+            prev = temp
+            temp = temp.next
+ 
+        # if key was not present in linked list
+        if(temp == None):
+            return
+ 
+        # Unlink the node from linked list
+        prev.next = temp.next
+ 
+        temp = None
+ 
+    # Utility function to print the linked LinkedList
+ 
+    def printList(self):
+        temp = self.head
+        while(temp):
+            print(" %d" % (temp.data)),
+            temp = temp.next
+            
+    def get_length(self):
+        temp = self.head
+        count = 0
+        while(temp):
+            count += 1
+            temp = temp.next
+            
+        return count
+    def reverse(self):
+        current = self.head
+        prev = None
+        while(current is not None):
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+ 
+# Driver program
+llist = LinkedList()
+llist.push(7)
+llist.push(1)
+llist.push(3)
+llist.push(2)
+ 
+print("Created Linked List: ")
+llist.printList() # 2 3 1 7
+llist.deleteNode(1) # 2 3 7
+print("\nLinked List after Deletion of 1:")
+llist.printList()
+print("Count length: {}".format(llist.get_length()))
+llist.reverse()
+llist.printList() # 7 3 2
+ 
+# This code is contributed by Nikhil Kumar Singh (nickzuck_007)
+```
+
+### Stack
+
+append: insert into the last
+
+```python
+stack = []
+
+stack.append('a')
+stack.append('b')
+stack.append('c')
+
+print(stack) # a b c
+
+print(stack.pop()) # c
+print(stack.pop()) # b
+print(stack.pop()) # a
+
+print(stack)
+```
+
+### Queue
+
+```python
+queue = []
+
+queue.append('A')
+queue.append('B')
+queue.append('C')
+
+print(queue)
+
+print(queue.pop(0)) # A
+print(queue.pop(0)) # B
+print(queue.pop(0)) # C
+
+print(queue)
+```
+
+### Priority Queue
+
+```python
+# A simple implementation of Priority Queue
+# using Queue.
+class PriorityQueue(object):
+    def __init__(self):
+        self.queue = []
+ 
+    def __str__(self):
+        return ' '.join([str(i) for i in self.queue])
+ 
+    # for checking if the queue is empty
+    def isEmpty(self):
+        return len(self.queue) == 0
+ 
+    # for inserting an element in the queue
+    def insert(self, data):
+        self.queue.append(data)
+ 
+    # for popping an element based on Priority
+    def delete(self):
+        try:
+            max_val = 0
+            for i in range(len(self.queue)):
+                if self.queue[i] > self.queue[max_val]:
+                    max_val = i
+            item = self.queue[max_val]
+            del self.queue[max_val]
+            return item
+        except IndexError:
+            print()
+            exit()
+ 
+if __name__ == '__main__':
+    myQueue = PriorityQueue()
+    myQueue.insert(12)
+    myQueue.insert(1)
+    myQueue.insert(14)
+    myQueue.insert(7)
+    print(myQueue) # 12 1 14 7     
+    while not myQueue.isEmpty():
+        print(myQueue.delete()) # 14 12 7 1
+```
+
