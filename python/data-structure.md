@@ -1,8 +1,6 @@
-# Data Structure and Algorithm
+# Data Structure
 
 This notes based on [GreeksforGreeks](https://www.geeksforgeeks.org/python-data-structures-and-algorithms/?ref=lbp)
-
-## Data Structures
 
 ### Frozen Sets
 
@@ -542,3 +540,239 @@ Levelorder traversal of binary tree is
 '''
 ```
 
+### Binary Search Tree
+
+```python
+# Python program to demonstrate
+# insert operation in binary search tree
+  
+# A utility class that represents
+# an individual node in a BST
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+  
+# A utility function to insert
+# a new node with the given key
+def insert(root, key):
+    if root is None:
+        return Node(key)
+    else:
+        if root.val == key:
+            return root
+        elif root.val < key:
+            root.right = insert(root.right, key)
+        else:
+            root.left = insert(root.left, key)
+    return root
+  
+# A utility function to do inorder tree traversal
+def inorder(root):
+    if root:
+        inorder(root.left)
+        print(root.val, end = " ")
+        inorder(root.right)
+  
+# Driver program to test the above functions
+# Let us create the following BST
+#     50
+#    /   \
+#   30    70
+#  / \    / \
+# 20 40  60 80
+  
+r = Node(50)
+r = insert(r, 30)
+r = insert(r, 20)
+r = insert(r, 40)
+r = insert(r, 70)
+r = insert(r, 60)
+r = insert(r, 80)
+  
+# Print inorder traversal of the BST
+inorder(r) # 20 30 40 50 60 70 80 
+```
+
+### Graph (non-directed)
+
+* Adjacency matrix
+* Adjencecy list
+
+Change to directed graph, just comment out this code section on line 20
+
+```python
+self.adjMatrix[to][frm] = cost
+```
+
+{% code lineNumbers="true" %}
+```python
+# A simple representation of graph using Adjacency Matrix
+class Graph:
+    def __init__(self,numvertex):
+        self.adjMatrix = [[-1]*numvertex for x in range(numvertex)]
+        self.numvertex = numvertex
+        self.vertices = {}
+        self.verticeslist = [0]*numvertex
+  
+    def set_vertex(self,vtx,id):
+        if 0<=vtx<=self.numvertex:
+            self.vertices[id] = vtx
+            self.verticeslist[vtx] = id
+  
+    def set_edge(self,frm,to,cost=0):
+        frm = self.vertices[frm]
+        to = self.vertices[to]
+        self.adjMatrix[frm][to] = cost
+          
+        # for directed graph do not add this
+        self.adjMatrix[to][frm] = cost
+  
+    def get_vertex(self):
+        return self.verticeslist
+  
+    def get_edges(self):
+        edges=[]
+        for i in range (self.numvertex):
+            for j in range (self.numvertex):
+                if (self.adjMatrix[i][j]!=-1):
+                    edges.append((self.verticeslist[i],self.verticeslist[j],self.adjMatrix[i][j]))
+        return edges
+          
+    def get_matrix(self):
+        return self.adjMatrix
+  
+G = Graph(6)
+G.set_vertex(0,'a')
+G.set_vertex(1,'b')
+G.set_vertex(2,'c')
+G.set_vertex(3,'d')
+G.set_vertex(4,'e')
+G.set_vertex(5,'f')
+G.set_edge('a','e',10)
+G.set_edge('a','c',20)
+G.set_edge('c','b',30)
+G.set_edge('b','e',40)
+G.set_edge('e','d',50)
+G.set_edge('f','e',60)
+
+'''
+      f
+  10  |60  50
+a  -  e   -  d
+|20   |40
+c  -  b
+  30
+'''
+
+print("Vertices of Graph")
+print(G.get_vertex()) # ['a', 'b', 'c', 'd', 'e', 'f']
+  
+print("Edges of Graph")
+print(G.get_edges())
+
+'''
+[('a', 'c', 20), ('a', 'e', 10), ('b', 'c', 30), 
+('b', 'e', 40), ('c', 'a', 20), ('c', 'b', 30), 
+('d', 'e', 50), ('e', 'a', 10), ('e', 'b', 40), 
+('e', 'd', 50), ('e', 'f', 60), ('f', 'e', 60)]
+'''
+  
+print("Adjacency Matrix of Graph")
+print(G.get_matrix())
+
+'''
+[[-1, -1, 20, -1, 10, -1], 
+[-1, -1, 30, -1, 40, -1], 
+[20, 30, -1, -1, -1, -1], 
+[-1, -1, -1, -1, 50, -1], 
+[10, 40, -1, 50, -1, 60], 
+[-1, -1, -1, -1, 60, -1]]
+'''
+```
+{% endcode %}
+
+```python
+# A class to represent the adjacency list of the node
+class AdjNode:
+    def __init__(self, data):
+        self.vertex = data
+        self.next = None
+  
+# A class to represent a graph. A graph
+# is the list of the adjacency lists.
+# Size of the array will be the no. of the
+# vertices "V"
+class Graph:
+    def __init__(self, vertices):
+        self.V = vertices
+        self.graph = [None] * self.V
+  
+    # Function to add an edge in an undirected graph
+    def add_edge(self, src, dest):
+      
+        # Adding the node to the source node
+        node = AdjNode(dest)
+        node.next = self.graph[src]
+        self.graph[src] = node
+  
+        # Adding the source node to the destination as
+        # it is the undirected graph
+        node = AdjNode(src)
+        node.next = self.graph[dest]
+        self.graph[dest] = node
+  
+    # Function to print the graph
+    def print_graph(self):
+        for i in range(self.V):
+            print("Adjacency list of vertex {}\n head".format(i), end="")
+            temp = self.graph[i]
+            while temp:
+                print(" -> {}".format(temp.vertex), end="")
+                temp = temp.next
+            print(" \n")
+  
+  
+# Driver program to the above graph class
+if __name__ == "__main__":
+    V = 5
+    graph = Graph(V)
+    graph.add_edge(0, 1)
+    graph.add_edge(0, 4)
+    graph.add_edge(1, 2)
+    graph.add_edge(1, 3)
+    graph.add_edge(1, 4)
+    graph.add_edge(2, 3)
+    graph.add_edge(3, 4)
+    
+    '''
+        4
+      / | \
+    0 - 1 - 3
+        | /
+        2
+    '''
+  
+    graph.print_graph()
+    
+'''
+Output will be
+
+Adjacency list of vertex 0
+head -> 4 -> 1 
+
+Adjacency list of vertex 1
+head -> 4 -> 3 -> 2 -> 0
+
+Adjacency list of vertex 2
+head -> 3 -> 1
+
+Adjacency list of vertex 3
+head -> 4 -> 2 -> 1
+
+Adjacency list of vertex 4
+head -> 3 -> 1 -> 0
+
+'''
+```

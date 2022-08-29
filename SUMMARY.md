@@ -21,7 +21,7 @@
 * [RoadMap](python/roadmap.md)
 * [Learn the basics](python/learn-the-basics.md)
 * [Advanced Topics](python/advanced-topics.md)
-* [Data Structure and Algorithm](python/data-structure-and-algorithm.md)
+* [Data Structure](python/data-structure.md)
 * [numpy](python/numpy/README.md)
   * [Basic](python/numpy/basic.md)
 
