@@ -388,3 +388,157 @@ if __name__ == '__main__':
         print(myQueue.delete()) # 14 12 7 1
 ```
 
+### Heap
+
+heapify 順序是由後往前選取 list 內元素建 min heap，
+
+而 list 輸出元素順序，由 heap index 由 root 往下輸出。
+
+#### Method&#x20;
+
+`heapq.heappush`(_heap_, _item_)
+
+`heapq.heappop`(_heap_)
+
+`heapq.heappushpop`(_heap_, _item_)
+
+`heapq.heapify`(_x_)
+
+```python
+# importing "heapq" to implement heap queue
+import heapq
+  
+# initializing list
+li = [5, 7, 9, 1, 3]
+  
+# using heapify to convert list into heap
+heapq.heapify(li)
+  
+# printing created heap
+print ("The created heap is : ",end="")
+print (list(li))
+
+# using heappush() to push elements into heap
+# pushes 4
+heapq.heappush(li,4)
+  
+# printing modified heap
+print ("The modified heap after push is : ",end="")
+print (list(li))
+  
+# using heappop() to pop smallest element
+print ("The popped and smallest element is : ",end="")
+print (heapq.heappop(li))
+
+# Output will be
+#The created heap is : [1, 3, 9, 7, 5]
+#The modified heap after push is : [1, 3, 4, 7, 5, 9]
+#The popped and smallest element is : 1
+```
+
+### Tree
+
+```python
+# Python program to for tree traversals
+  
+# A class that represents an individual node in a
+# Binary Tree
+class Node:
+    def __init__(self, key):
+        self.left = None
+        self.right = None
+        self.val = key
+  
+# A function to do inorder tree traversal
+def printInorder(root):
+  
+    if root:
+        printInorder(root.left)
+        print(root.val, end = " "),
+        printInorder(root.right)
+  
+# A function to do postorder tree traversal
+def printPostorder(root):
+  
+    if root:
+        printPostorder(root.left)
+        printPostorder(root.right)
+        print(root.val, end = " "),
+  
+# A function to do preorder tree traversal
+def printPreorder(root):
+  
+    if root:
+        print(root.val, end = " "),
+        printPreorder(root.left)
+        printPreorder(root.right)
+        
+def printLevelorder(root):
+  
+    # Base Case
+    if root is None:
+        return
+      
+    # Create an empty queue
+    # for level order traversal
+    queue = []
+  
+    # Enqueue Root and initialize height
+    queue.append(root)
+  
+    while(len(queue) > 0):
+      
+        # Print front of queue and
+        # remove it from queue
+        print (queue[0].val, end = " ")
+        node = queue.pop(0)
+  
+        # Enqueue left child
+        if node.left is not None:
+            queue.append(node.left)
+  
+        # Enqueue right child
+        if node.right is not None:
+            queue.append(node.right)
+  
+# Driver code
+root = Node(1)
+root.left = Node(2)
+root.right = Node(3)
+root.left.left = Node(4)
+root.left.right = Node(5)
+
+'''
+    1
+   / \
+  2   3
+ / \
+4   5  
+'''
+
+print("Preorder traversal of binary tree is")
+printPreorder(root)
+  
+print("\nInorder traversal of binary tree is")
+printInorder(root)
+  
+print("\nPostorder traversal of binary tree is")
+printPostorder(root)
+
+print("\nLevelorder traversal of binary tree is")
+printLevelorder(root)
+
+'''
+Output will be
+
+Preorder traversal of binary tree is
+1 2 4 5 3 
+Inorder traversal of binary tree is
+4 2 5 1 3
+Postorder traversal of binary tree is
+4 5 2 3 1
+Levelorder traversal of binary tree is
+1 2 3 4 5
+'''
+```
+
