@@ -22,6 +22,7 @@
 * [Learn the basics](python/learn-the-basics.md)
 * [Advanced Topics](python/advanced-topics.md)
 * [Data Structure](python/data-structure.md)
+* [Algorithm](python/algorithm.md)
 * [numpy](python/numpy/README.md)
   * [Basic](python/numpy/basic.md)
 
