@@ -16,6 +16,13 @@
   * [Git Commit Message](ji-ben-su-yang/video-notes/git-commit-message.md)
   * [用 Git & Github 與他人協作開發](ji-ben-su-yang/video-notes/yong-git-github-yu-ta-ren-xie-zuo-kai-fa.md)
 
+***
+
+* [C++](c++/README.md)
+  * [W3School Notes](c++/w3school-notes.md)
+  * [FEIS studio](c++/feis-studio.md)
+  * [Jserv](c++/jserv.md)
+
 ## Python
 
 * [RoadMap](python/roadmap.md)
